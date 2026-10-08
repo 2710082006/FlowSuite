@@ -1,0 +1,461 @@
+.project-details-page {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.project-details-topbar {
+  margin-bottom: 24px;
+}
+
+.project-details-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.project-details-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.project-details-icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.project-details-eyebrow {
+  margin-bottom: 5px;
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.project-details-title h1 {
+  margin-bottom: 7px;
+  font-size: 30px;
+  letter-spacing: -0.7px;
+}
+
+.project-details-title p:last-child {
+  max-width: 650px;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.project-details-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.project-details-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+}
+
+.project-overview-card,
+.project-progress-card,
+.project-owner-card,
+.project-dates-card {
+  padding: 24px;
+}
+
+.project-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.project-section-heading h2 {
+  font-size: 16px;
+}
+
+.project-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.project-info-item span {
+  color: var(--color-text-muted);
+  font-size: 11px;
+}
+
+.project-info-item strong {
+  color: var(--color-text-primary);
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.project-progress-value {
+  color: var(--color-primary);
+  font-size: 20px;
+}
+
+.project-large-progress {
+  height: 10px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  background: var(--color-surface-muted);
+}
+
+.project-large-progress-bar {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.project-progress-card p {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.project-owner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.project-owner-avatar {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.project-owner > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.project-owner strong {
+  font-size: 14px;
+}
+
+.project-owner span {
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.project-timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.project-timeline-item:last-child {
+  border-bottom: none;
+}
+
+.project-timeline-item > svg {
+  color: var(--color-primary);
+}
+
+.project-timeline-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.project-timeline-item span {
+  color: var(--color-text-muted);
+  font-size: 11px;
+}
+
+.project-timeline-item strong {
+  font-size: 13px;
+}
+
+.project-details-loading {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  color: var(--color-text-secondary);
+}
+
+.project-details-error {
+  max-width: 600px;
+  margin: 80px auto;
+}
+
+.project-details-error > div {
+  padding: 28px;
+}
+
+.project-details-error h2 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.project-details-error p {
+  margin-bottom: 20px;
+  color: var(--color-danger);
+  font-size: 13px;
+}
+
+.project-details-error-actions {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 900px) {
+  .project-details-header {
+    flex-direction: column;
+  }
+
+  .project-details-actions {
+    width: 100%;
+  }
+
+  .project-details-actions button {
+    flex: 1;
+  }
+
+  .project-details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-details-title h1 {
+    font-size: 24px;
+  }
+
+  .project-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.project-edit-card {
+  padding: 24px;
+  margin-bottom: 24px;
+  border-color: var(--color-primary-light);
+}
+
+.project-edit-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.project-edit-header h2 {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.project-edit-header p {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.project-edit-close {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+}
+
+.project-edit-close:hover {
+  background: var(--color-surface-muted);
+}
+
+.project-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.project-edit-field {
+  width: 100%;
+}
+
+.project-edit-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--color-text-primary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.project-edit-field textarea,
+.project-edit-field select,
+.project-edit-field input[type="date"] {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  outline: none;
+  transition: var(--transition-normal);
+}
+
+.project-edit-field textarea {
+  min-height: 100px;
+  padding: 12px 13px;
+  resize: vertical;
+}
+
+.project-edit-field select,
+.project-edit-field input[type="date"] {
+  height: 46px;
+  padding: 0 13px;
+}
+
+.project-edit-field textarea:focus,
+.project-edit-field select:focus,
+.project-edit-field input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.project-edit-field input[type="range"] {
+  width: 100%;
+  accent-color: var(--color-primary);
+}
+
+.project-edit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.project-edit-error {
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+  font-size: 13px;
+}
+
+.project-edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 5px;
+}
+
+@media (max-width: 1100px) {
+  .project-edit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .project-edit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-edit-actions {
+    flex-direction: column-reverse;
+  }
+
+  .project-edit-actions button {
+    width: 100%;
+  }
+}
+.delete-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(4px);
+}
+
+.delete-modal {
+  width: 100%;
+  max-width: 430px;
+
+  padding: 28px;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+
+  background: var(--color-surface);
+  box-shadow: var(--shadow-lg);
+}
+
+.delete-modal-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  border-radius: 50%;
+
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.delete-modal h2 {
+  margin-bottom: 8px;
+  font-size: 19px;
+}
+
+.delete-modal p {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.delete-modal p strong {
+  color: var(--color-text-primary);
+}
+
+.delete-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+}

@@ -1,0 +1,13 @@
+.task-board {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+  .task-column {
+    min-width: 300px;
+  }
+}

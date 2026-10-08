@@ -1,0 +1,364 @@
+.customer-details-page {
+  padding: var(--space-8);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.customer-details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.customer-back-button {
+  border: none;
+  background: transparent;
+  color: var(--color-text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 0;
+}
+
+.customer-back-button:hover {
+  color: var(--color-primary);
+}
+
+.customer-header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* PROFILE */
+
+.customer-profile-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-6);
+}
+
+.customer-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.customer-profile-main {
+  min-width: 0;
+}
+
+.customer-name-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.customer-name-row h1 {
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.customer-company {
+  color: var(--color-text-secondary);
+  margin-top: 6px;
+  font-size: 15px;
+}
+
+.customer-industry {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--color-surface-muted);
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* GRID */
+
+.customer-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.customer-info-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.customer-card-header {
+  padding-bottom: 16px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.customer-card-header h2 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* CONTACT */
+
+.customer-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.customer-info-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.customer-info-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.customer-info-item span,
+.customer-assignment span,
+.customer-meta-grid span {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.customer-info-item p {
+  font-size: 14px;
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+/* ASSIGNMENT */
+
+.customer-assignment {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.assignment-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.customer-assignment p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.customer-assignment small {
+  display: block;
+  color: var(--color-text-muted);
+  margin-top: 3px;
+  font-size: 12px;
+}
+
+/* META */
+
+.customer-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 20px;
+}
+
+.customer-meta-grid > div {
+  min-width: 0;
+}
+
+.customer-meta-grid p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+/* NOTES */
+
+.customer-notes-card {
+  grid-column: span 2;
+}
+
+.customer-notes p {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.customer-notes .empty-notes {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* LOADING / ERROR */
+
+.customer-details-loading,
+.customer-details-error {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.customer-details-loading p,
+.customer-details-error p {
+  color: var(--color-text-secondary);
+}
+
+.customer-details-error h2 {
+  font-size: 22px;
+}
+
+/* DELETE MODAL */
+
+.customer-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.customer-delete-modal {
+  width: 100%;
+  max-width: 440px;
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  box-shadow: var(--shadow-lg);
+}
+
+.delete-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.customer-delete-modal h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.customer-delete-modal > p {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.delete-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .customer-details-page {
+    padding: var(--space-5);
+  }
+
+  .customer-details-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .customer-header-actions {
+    width: 100%;
+  }
+
+  .customer-header-actions button {
+    flex: 1;
+  }
+
+  .customer-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .customer-notes-card {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .customer-profile-card {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .customer-avatar {
+    width: 56px;
+    height: 56px;
+    font-size: 22px;
+  }
+
+  .customer-name-row h1 {
+    font-size: 22px;
+  }
+
+  .customer-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .customer-delete-modal {
+    padding: 22px;
+  }
+}

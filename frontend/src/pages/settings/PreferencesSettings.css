@@ -1,0 +1,192 @@
+.preferences-settings-page {
+  max-width: 900px;
+}
+
+.preferences-settings-header {
+  margin-bottom: 24px;
+}
+
+.preferences-eyebrow {
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+.preferences-settings-header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.preferences-settings-header p:last-child {
+  color: var(--color-text-secondary);
+}
+
+.preferences-card {
+  max-width: 700px;
+}
+
+.preferences-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.preferences-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.preferences-section-header {
+  margin-bottom: 4px;
+}
+
+.preferences-section-header h2 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.preferences-section-header p {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.preferences-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.preferences-field label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.preferences-select {
+  min-width: 160px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.preferences-select:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+.preferences-divider {
+  height: 1px;
+  background: var(--color-border-light);
+  margin: 28px 0;
+}
+
+.preference-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 4px 0;
+}
+
+.preference-toggle-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.preference-toggle-content strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.preference-toggle-content span {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.preference-toggle {
+  width: 44px;
+  height: 24px;
+  padding: 2px;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-border);
+  transition: background var(--transition-fast);
+}
+
+.preference-toggle-knob {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  transform: translateX(0);
+  transition: transform var(--transition-fast);
+}
+
+.preference-toggle-active {
+  background: var(--color-primary);
+}
+
+.preference-toggle-active .preference-toggle-knob {
+  transform: translateX(20px);
+}
+
+.preferences-message {
+  margin-top: 20px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+}
+
+.preferences-message-error {
+  color: var(--color-danger);
+  background: var(--color-danger-bg);
+}
+
+.preferences-message-success {
+  color: var(--color-success);
+  background: var(--color-success-bg);
+}
+
+.preferences-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 28px;
+}
+
+.preferences-loading {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 600px) {
+  .preferences-field,
+  .preference-toggle-row {
+    align-items: flex-start;
+  }
+
+  .preferences-field {
+    flex-direction: column;
+  }
+
+  .preferences-select {
+    width: 100%;
+  }
+
+  .preference-toggle-row {
+    gap: 12px;
+  }
+}

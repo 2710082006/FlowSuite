@@ -1,0 +1,71 @@
+.workspace-settings-page {
+  max-width: 900px;
+}
+
+.workspace-settings-header {
+  margin-bottom: 24px;
+}
+
+.workspace-eyebrow {
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+.workspace-settings-header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.workspace-settings-header p:last-child {
+  color: var(--color-text-secondary);
+}
+
+.workspace-card {
+  max-width: 650px;
+}
+
+.workspace-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.workspace-slug-help {
+  margin-top: -8px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.workspace-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.workspace-message {
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+}
+
+.workspace-message-error {
+  color: var(--color-danger);
+  background: var(--color-danger-bg);
+}
+
+.workspace-message-success {
+  color: var(--color-success);
+  background: var(--color-success-bg);
+}
+
+.workspace-loading {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--color-text-secondary);
+}

@@ -1,0 +1,62 @@
+.security-settings-page {
+  max-width: 900px;
+}
+
+.security-settings-header {
+  margin-bottom: 24px;
+}
+
+.security-eyebrow {
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+.security-settings-header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.security-settings-header p:last-child {
+  color: var(--color-text-secondary);
+}
+
+.security-card {
+  max-width: 650px;
+}
+
+.security-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.security-password-help {
+  margin-top: -8px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.security-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.security-message {
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+}
+
+.security-message-error {
+  color: var(--color-danger);
+  background: var(--color-danger-bg);
+}
+
+.security-message-success {
+  color: var(--color-success);
+  background: var(--color-success-bg);
+}

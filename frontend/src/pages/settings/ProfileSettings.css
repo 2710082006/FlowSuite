@@ -1,0 +1,65 @@
+.profile-settings-page {
+  max-width: 900px;
+}
+
+.profile-settings-header {
+  margin-bottom: 24px;
+}
+
+.profile-eyebrow {
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+.profile-settings-header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.profile-settings-header p:last-child {
+  color: var(--color-text-secondary);
+}
+
+.profile-card {
+  max-width: 650px;
+}
+
+.profile-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.profile-message {
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+}
+
+.profile-message-error {
+  color: var(--color-danger);
+  background: var(--color-danger-bg);
+}
+
+.profile-message-success {
+  color: var(--color-success);
+  background: var(--color-success-bg);
+}
+
+.profile-loading {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--color-text-secondary);
+}

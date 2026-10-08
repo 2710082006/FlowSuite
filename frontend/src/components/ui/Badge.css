@@ -1,0 +1,33 @@
+.fs-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.fs-badge-default {
+  background: var(--color-surface-muted);
+  color: var(--color-text-secondary);
+}
+
+.fs-badge-success {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.fs-badge-warning {
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+.fs-badge-danger {
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+
+.fs-badge-info {
+  background: var(--color-info-bg);
+  color: var(--color-info);
+}

@@ -1,0 +1,14 @@
+.fs-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-primary-light);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: fs-spin 0.7s linear infinite;
+}
+
+@keyframes fs-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

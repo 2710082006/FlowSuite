@@ -1,0 +1,88 @@
+.task-activity {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-activity-item {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  padding-bottom: 20px;
+}
+
+.task-activity-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 14px;
+  bottom: 0;
+  width: 1px;
+  background: var(--color-border);
+}
+
+.task-activity-icon {
+  position: relative;
+  z-index: 1;
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-primary);
+}
+
+.task-activity-content {
+  min-width: 0;
+  padding-top: 2px;
+}
+
+.task-activity-content p {
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.task-activity-content p strong {
+  color: var(--color-text-primary);
+  font-weight: 650;
+}
+
+.task-activity-content > span {
+  display: block;
+  margin-top: 3px;
+  color: var(--color-text-muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.task-activity-content time {
+  display: block;
+  margin-top: 6px;
+  color: var(--color-text-muted);
+  font-size: 10px;
+}
+
+.task-activity-change {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 7px;
+  padding: 5px 8px;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-muted);
+  color: var(--color-text-secondary);
+  font-size: 10px;
+}
+
+.task-activity-empty,
+.task-activity-loading {
+  padding: 20px 0;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  text-align: center;
+}
