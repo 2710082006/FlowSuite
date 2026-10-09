@@ -1,13 +1,60 @@
 .task-board {
   display: flex;
+  align-items: flex-start;
   gap: 16px;
   width: 100%;
   overflow-x: auto;
-  padding-bottom: 8px;
+  padding: 2px 2px 12px;
+  scrollbar-width: thin;
+  scrollbar-color: #d0d5dd transparent;
+}
+
+.task-board::-webkit-scrollbar {
+  height: 7px;
+}
+
+.task-board::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.task-board::-webkit-scrollbar-thumb {
+  background: #d0d5dd;
+  border-radius: 999px;
+}
+
+.task-board::-webkit-scrollbar-thumb:hover {
+  background: #98a2b3;
+}
+
+.task-board > * {
+  min-width: 0;
+}
+
+@media (max-width: 1100px) {
+  .task-board {
+    gap: 14px;
+  }
 }
 
 @media (max-width: 900px) {
-  .task-column {
+  .task-board {
+    gap: 14px;
+    padding-bottom: 10px;
+  }
+
+  .task-board > .task-column {
     min-width: 300px;
+    flex: 0 0 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .task-board {
+    gap: 12px;
+  }
+
+  .task-board > .task-column {
+    min-width: 285px;
+    flex-basis: 285px;
   }
 }

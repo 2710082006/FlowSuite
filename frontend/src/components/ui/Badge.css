@@ -1,33 +1,76 @@
 .fs-badge {
   display: inline-flex;
   align-items: center;
-  padding: 4px 9px;
+  justify-content: center;
+  min-height: 24px;
+  padding: 3px 9px;
+  border: 1px solid transparent;
   border-radius: 999px;
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 10px;
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  white-space: nowrap;
 }
 
 .fs-badge-default {
   background: var(--color-surface-muted);
+  border-color: var(--color-border-light);
   color: var(--color-text-secondary);
 }
 
 .fs-badge-success {
   background: var(--color-success-bg);
+  border-color: #abefc6;
   color: var(--color-success);
 }
 
 .fs-badge-warning {
   background: var(--color-warning-bg);
+  border-color: #fedf89;
   color: var(--color-warning);
 }
 
 .fs-badge-danger {
   background: var(--color-danger-bg);
+  border-color: #fecdca;
   color: var(--color-danger);
 }
 
 .fs-badge-info {
   background: var(--color-info-bg);
+  border-color: #b2ddff;
   color: var(--color-info);
+}
+
+@media (max-width: 640px) {
+  .fs-badge {
+    min-height: 23px;
+    padding: 3px 8px;
+    font-size: 9px;
+  }
+}
+.fs-badge-low {
+  background: var(--color-success-bg);
+  border-color: #abefc6;
+  color: var(--color-success);
+}
+
+.fs-badge-medium {
+  background: var(--color-info-bg);
+  border-color: #b2ddff;
+  color: var(--color-info);
+}
+
+.fs-badge-high {
+  background: var(--color-warning-bg);
+  border-color: #fedf89;
+  color: var(--color-warning);
+}
+
+.fs-badge-critical {
+  background: var(--color-danger-bg);
+  border-color: #fecdca;
+  color: var(--color-danger);
 }

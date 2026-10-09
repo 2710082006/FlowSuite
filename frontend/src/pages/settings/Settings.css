@@ -1,41 +1,58 @@
 .settings-page {
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .settings-header {
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 .settings-eyebrow {
+  margin-bottom: 8px;
   color: var(--color-primary);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  margin-bottom: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
 }
 
 .settings-header h1 {
-  font-size: 28px;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  color: var(--color-text-primary);
+  font-size: 32px;
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -1px;
 }
 
 .settings-header > p:last-child {
+  max-width: 680px;
   color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 .settings-layout {
   display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
-  gap: 24px;
+  grid-template-columns: 285px minmax(0, 1fr);
+  gap: 28px;
   align-items: start;
 }
 
 .settings-sidebar {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  position: sticky;
+  top: 20px;
   padding: 8px;
-  box-shadow: var(--shadow-sm);
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #fafaff 100%
+  );
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow:
+    0 1px 2px rgba(16, 24, 40, 0.04),
+    0 8px 24px rgba(16, 24, 40, 0.05);
 }
 
 .settings-sidebar nav {
@@ -45,63 +62,89 @@
 }
 
 .settings-nav-item {
+  position: relative;
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  padding: 12px;
-  border-radius: var(--radius-md);
+  padding: 13px 12px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  color: var(--color-text-primary);
   transition:
-    background var(--transition-fast),
-    color var(--transition-fast);
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
 }
 
 .settings-nav-item:hover {
-  background: var(--color-surface-muted);
+  background: #f8f9fc;
+  border-color: var(--color-border-light);
+  transform: translateX(2px);
 }
 
 .settings-nav-item-active {
   background: var(--color-primary-light);
-  color: var(--color-primary);
+  border-color: rgba(99, 91, 255, 0.12);
+}
+
+.settings-nav-item-active::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 10px;
+  bottom: 10px;
+  width: 3px;
+  border-radius: 0 4px 4px 0;
+  background: var(--color-primary);
+}
+
+.settings-nav-item-active:hover {
+  background: var(--color-primary-light);
+  transform: none;
 }
 
 .settings-nav-icon {
-  width: 34px;
-  height: 34px;
+  width: 38px;
+  height: 38px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--radius-md);
-  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border-light);
+  border-radius: 11px;
+  background: #f7f8fb;
   color: var(--color-text-secondary);
 }
 
 .settings-nav-item-active .settings-nav-icon {
-  background: var(--color-surface);
+  background: #ffffff;
+  border-color: rgba(99, 91, 255, 0.12);
   color: var(--color-primary);
+  box-shadow: 0 2px 6px rgba(99, 91, 255, 0.08);
 }
 
 .settings-nav-content {
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 4px;
+  padding-top: 1px;
 }
 
 .settings-nav-content strong {
-  font-size: 14px;
-  font-weight: 600;
+  color: var(--color-text-primary);
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.4;
 }
 
 .settings-nav-content span {
   color: var(--color-text-muted);
-  font-size: 12px;
-  line-height: 1.4;
+  font-size: 11px;
+  line-height: 1.5;
 }
 
-.settings-nav-item-active
-  .settings-nav-content
-  strong {
+.settings-nav-item-active .settings-nav-content strong {
   color: var(--color-primary);
 }
 
@@ -109,22 +152,38 @@
   min-width: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .settings-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .settings-sidebar {
+    position: static;
   }
 
-  .settings-sidebar {
-    width: 100%;
+  .settings-layout {
+    grid-template-columns: 1fr;
   }
 
   .settings-sidebar nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 5px;
   }
 }
 
 @media (max-width: 520px) {
+  .settings-header {
+    margin-bottom: 24px;
+  }
+
+  .settings-header h1 {
+    font-size: 27px;
+  }
+
   .settings-sidebar nav {
     grid-template-columns: 1fr;
   }

@@ -1,0 +1,71 @@
+/* GLOBAL THEME — FlowSuite */
+
+:root {
+font-family: Inter, "Segoe UI", sans-serif;
+color: #172b4d;
+background: #f5f8fc;
+
+ --primary: #0b2f6b;
+  --primary-hover: #082653;
+  --page-bg: #f5f8fc;
+  --surface: #ffffff;
+  --text-primary: #172b4d;
+  --text-secondary: #7b8ba5;
+  --border: #e2e8f0;
+  --success: #16c784;
+  --radius: 14px;
+}
+
+
+* {
+  box-sizing: border-box;
+  }
+
+html {
+min-width: 320px;
+}
+
+body {
+margin: 0;
+min-width: 320px;
+min-height: 100vh;
+background: var(--page-bg);
+color: var(--text-primary);
+font-family: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+font: inherit;
+}
+
+button {
+cursor: pointer;
+}
+
+a {
+color: var(--primary);
+text-decoration: none;
+}
+
+h1, h2, h3, h4, p {
+margin-top: 0;
+}
+
+input,
+textarea,
+select {
+color: var(--text-primary);
+}
+
+input::placeholder,
+textarea::placeholder {
+color: #94a3b8;
+}
+
+::selection {
+background: #dbeafe;
+color: var(--primary);
+}
